@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
+import budget from './budget.png';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -21,6 +22,7 @@ function Navbar() {
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
+            <img src={budget} />
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
                 <AiIcons.AiOutlineClose />
