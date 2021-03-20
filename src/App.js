@@ -1,20 +1,23 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Dashboard from './components/Pages/Dashboard';
-import Expenses from './components/Pages/Expenses';
-import Budget from './components/Pages/Budget';
+import Dashboard from './pages/Dashboard';
+import Expenses from './pages/Expenses';
+import Budget from './pages/Budget';
+import Goals from './pages/Goals';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Router>
-        <Navbar />
+        <Sidebar />
         <Switch>
-          <Route path='/' exact component={Dashboard} />
-          <Route path='/expenses' component={Expenses} />
-          <Route path='/budget' component={Budget} />
+          <Route path='/' exact render={() => <Dashboard /> } />
+          <Route path='/expenses'  render={() => <Expenses /> } />
+          <Route path='/goals'  render={() => <Goals /> } />
+          <Route path='/budget' render={() => <Budget /> } />
+          <Route path="*" render={() => <Dashboard /> } />
         </Switch>
       </Router>
          

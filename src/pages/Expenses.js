@@ -1,9 +1,16 @@
 import React from 'react'
+import {
+    Container
+  } from "react-bootstrap"
 
 function Expenses() {
     return (
         <div>
-           <h1>Expenses</h1>
+            <Container>
+                <h1>Expenses</h1>
+
+            </Container>
+           
                                    
         </div>
     )

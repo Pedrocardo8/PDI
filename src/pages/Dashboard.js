@@ -7,11 +7,11 @@ import {
     Button,
     Table
   } from "react-bootstrap"
-import './Dashboard.css';
+
 
 function Dashboard() {
     return (
-        <div>
+        <div className='Dash'>
             <Container>
                 <Row className='mt-5'>
                     <Col className='border rounded'>
@@ -99,4 +99,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default Dashboard;
